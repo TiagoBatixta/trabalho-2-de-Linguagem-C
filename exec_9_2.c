@@ -19,23 +19,22 @@ int main(void){
 
 #include <stdio.h>
 
-struct pair{
-    int min, max;
-}Pair;
+typedef struct {
+    int min, max;}Pair;
+    Pair p;
 
-void getmm(int v{}, int n){
-    for(int i =0; i < n; i++){
-        if(v[i] < pair.min)
-            pair.min = v[i];
-    }
-        
+void getmm(int v[], int n){
+    for(int i=1; i<n; i++){
+        if(Pair.min > v[i]) Pair.min = v[i];
+        if(Pair.max < v[i]) Pair.max = v[i];
+    }        
 }
 
 int main(void){
-    struct Pair min = {5, 7, 2, 8, -3, 1, 9, 6, 4};
-    int getmm = (v,9);
-    printf("minimum item: %d\n", getmm);
-    //getmm(&p1.max);
+    int v[9] = {5, 7, 2, 8, -3, 1, 9, 6, 4};
+    Pair p = getmm(v,9);
+    printf("minimum item: %d\n", p.min);
+    printf("Maximum item: %d\n", p.max);
     
     return 0;
-}*/
+}

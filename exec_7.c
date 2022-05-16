@@ -12,7 +12,10 @@ void printg(Geo g){
 }  
 
 void setLoc(char *loc, Geo *g){
-    *loc= loc, (*g).lat, (*g).lon;
+    //(*g).lat; (*g).lon
+    //while (*loc) g->loc == loc;
+    /*printf("{%s, %.3f, %.3f}\n",*/ 
+    //g->loc = loc; //(*g).lat; (*g).lon;
 }  
 
 int main(void) {
@@ -21,6 +24,6 @@ int main(void) {
     printg(p);
     setLoc("Fatec-SP", &p);
     printg(p);
-
+   
    return 0;
 }

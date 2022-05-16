@@ -6,7 +6,7 @@ char *compress(char s[]){
         if(s[i] != ' '){
             s[j] = s[i];
             j++;}
-    s[j] = '\0';
+        s[j] = '\0';
     return s;
 }
 
