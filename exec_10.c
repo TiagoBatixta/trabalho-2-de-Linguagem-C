@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int adjust(int *x, int *y){
+void adjust(int *x, int *y){
         int n = *x;
         if ( *x > *y) {
              *x = *y;

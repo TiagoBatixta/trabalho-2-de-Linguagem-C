@@ -1,33 +1,14 @@
-/*#include <stdio.h>
-
-struct pair{
-    int min, max;
-};
-
-void imprime(int *n){
-    *n = *n +1;
-    printf("Valor= %d\n", *n);
-}
-
-int main(void){
-    struct pair p1 = {10,20};
-    imprime(&p1.min);
-    imprime(&p1.max);
-    
-    return 0;
-}*/
-
 #include <stdio.h>
 
 typedef struct {
-    int min, max;}Pair;
-    Pair p;
-
-void getmm(int v[], int n){
-    for(int i=1; i<n; i++){
-        if(Pair.min > v[i]) Pair.min = v[i];
-        if(Pair.max < v[i]) Pair.max = v[i];
-    }        
+    int min, max;} Pair;
+     
+Pair getmm(int v[], int n){
+    Pair mm = {v[0],v[0]}; 
+    for(int i=1; i<n; i++)
+        if(v[i] < mm.min) mm.min = v[i];
+        else if(v[i] > mm.max) mm.max = v[i];
+    return mm;        
 }
 
 int main(void){
